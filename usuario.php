@@ -2,7 +2,7 @@
 namespace Alura;
 class usuario
 {
-
+//adicionar o isset
     private $nome;
     private $sobrenome;
 
