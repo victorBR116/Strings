@@ -2,7 +2,6 @@
 namespace Alura;
 class usuario
 {
-//adicionar o isset
     private $nome;
     private $sobrenome;
 
@@ -10,15 +9,15 @@ class usuario
     {
       
         $nomeSobrenome = explode(" ", $nome, 2);   
-
-        if ($nomeSobrenome[0] === "" )
+        
+        if (empty( $nomeSobrenome[0]))
         {
             $this->nome = "Nome inválido.";
         } else {
             $this->nome = $nomeSobrenome[0];
         }
 
-        if ($nomeSobrenome[1] === null)
+        if (!isset($nomeSobrenome[1]))
         {
             $this->sobrenome = "Sobrenome inválido.";
         }else {
