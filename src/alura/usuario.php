@@ -1,5 +1,5 @@
 <?php
-namespace Alura;
+namespace App\Alura;
 class usuario
 {
     private $nome;
