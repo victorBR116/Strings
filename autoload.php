@@ -19,6 +19,4 @@ spl_autoload_register(function($classe)
 
    $arquivo = $diretorio . $namespace_arquivo . '.php';
 
-    var_dump($diretorio);
-
 });
