@@ -1,6 +1,8 @@
 <?php
-namespace App\Alura;
-class usuario
+
+namespace App;
+
+class Usuario
 {
     private $nome;
     private $sobrenome;

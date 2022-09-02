@@ -1,11 +1,12 @@
 <?php
 
-require_once 'E:\Estudos\Alura\Strings\autoload.php';
+require 'autoload.php';
 
+use App\Contato;
+use App\Usuario;
 
-$usuario = new App\Alura\usuario($_POST['nome']);
-$contato = new App\alura\Contato($_POST['email']);
-
+$contato = new Contato($_POST['email']);
+$usuario = new Usuario($_POST['nome']);
 ?>
 
 
