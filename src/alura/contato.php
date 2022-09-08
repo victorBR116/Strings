@@ -5,8 +5,10 @@ namespace App;
 class Contato
 {
     private $email;
+    private $endereco;
+    private $cep;
 
-    public function __construct(string $email)
+    public function __construct(string $email, string $endereco, string $cep)
     {
         $this->email = $email;
 
@@ -15,19 +17,11 @@ class Contato
         } else {
             $this->setEmail("Email inválido.");
         }
+
+        $this->endereco = $endereco;
+        $this->cep = $cep;
     }
 
-    /*public function __construct($email)
-    {
-        $this->email = $email;
-    
-        if ($this->validaEmail($email) !== false) {
-            $this->setEmail($email);
-        } else {
-            $this->setEmail("Email inválido");
-        }
-    }
-*/
     public function setEmail(string $email): void
     {
         $this->email = $email;       
@@ -53,4 +47,13 @@ class Contato
     {
         return $this->email;
     }
+
+    public function getEnderecoCep(): string
+    {
+        $enderecoCep = [$this->endereco, $this->cep];
+        return implode(" - ", $enderecoCep);
+         
+    }
+
+  
 }
