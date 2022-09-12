@@ -12,7 +12,6 @@ class Contato
     public function __construct(string $email, string $endereco, string $cep, string $telefone)
     {
         $this->email = $email;
-        $this->telefone = $telefone;
         
         if ($this->validaEmail($email) !== false){
             $this->setEmail($email);
@@ -20,12 +19,29 @@ class Contato
             $this->setEmail("Email inválido.");
         }
 
+        if ($this->validaTelefone($telefone)){
+            $this->setTelefone($telefone);
+        }else{
+            $this->setTelefone("Telefone inválido.");
+        }
+
         $this->endereco = $endereco;
         $this->cep = $cep;
         
     }
 
-    public function setEmail(string $email): void
+    private function validaTelefone(string $telefone): int
+    {
+        //3233-7523
+        return preg_match('/^[0-9]{4}-[0-9]{4}$/', $telefone, $encontrados);
+    }
+
+    private function setTelefone(string $telefone): void
+    {
+        $this->telefone = $telefone;
+    }
+
+    private function setEmail(string $email): void
     {
         $this->email = $email;       
     }
@@ -58,7 +74,7 @@ class Contato
          
     }
 
-    public function getTelefone(): string
+    public function getTelefone()
     {
         return $this->telefone;
     }
