@@ -6,7 +6,7 @@ use App\Contato;
 use App\Usuario;
 
 $contato = new Contato($_POST['email'], $_POST['endereco'], $_POST['cep'], $_POST['telefone']);
-$usuario = new Usuario($_POST['nome'], $_POST['senha']);
+$usuario = new Usuario($_POST['nome'], $_POST['senha'], $_POST['genero']);
 ?>
 
 
@@ -28,7 +28,7 @@ $usuario = new Usuario($_POST['nome'], $_POST['senha']);
 
 <div class="mx-5 my-5">
 <h1>Cadastro feito com sucesso.</h1>
-<p>Seguem os dados de sua conta:</p>
+<p><?php echo $usuario->getTratamento(); ?>, seguem os dados de sua conta:</p>
 <ul class="list-group">
     <li class="list-group-item">Primeiro nome: <?php echo $usuario->getNome(); ?> </li>
     <li class="list-group-item">Sobrenome: <?php echo $usuario->getSobrenome();?></li>
