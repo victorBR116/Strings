@@ -30,13 +30,13 @@ $usuario = new Usuario($_POST['nome'], $_POST['senha'], $_POST['genero']);
 <h1>Cadastro feito com sucesso.</h1>
 <p><?php echo htmlspecialchars($usuario->getTratamento()); ?>, seguem os dados de sua conta:</p>
 <ul class="list-group">
-    <li class="list-group-item">Primeiro nome: <?php echo htmlspecialchars($usuario->getNome()); ?> </li>
+    <li class="list-group-item">Primeiro nome: <?php echo htmlspecialchars($usuario->getNome());?> </li>
     <li class="list-group-item">Sobrenome: <?php echo htmlspecialchars($usuario->getSobrenome());?></li>
-    <li class="list-group-item">Usuário:<?php echo htmlspecialchars($contato->getUsuario()); ?> </li>
-    <li class="list-group-item">Senha:<?php echo htmlspecialchars($usuario->getSenha()); ?> </li>
-    <li class="list-group-item">Telefone:<?php echo htmlspecialchars($contato->getTelefone()); ?> </li>
-    <li class="list-group-item">E-mail:<?php echo htmlspecialchars($contato->getEmail()); ?> </li>
-    <li class="list-group-item">Endereço:<?php echo htmlspecialchars($contato->getEnderecoCep()); ?> </li>
+    <li class="list-group-item">Usuário:<?php echo htmlspecialchars($contato->getUsuario());?> </li>
+    <li class="list-group-item">Senha:<?php echo htmlspecialchars($usuario->getSenha());?> </li>
+    <li class="list-group-item">Telefone:<?php echo htmlspecialchars($contato->getTelefone());?> </li>
+    <li class="list-group-item">E-mail:<?php echo htmlspecialchars($contato->getEmail());?> </li>
+    <li class="list-group-item">Endereço:<?php echo htmlspecialchars($contato->getEnderecoCep());?> </li>
 </ul>
 </div>
 </body>
