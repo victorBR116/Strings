@@ -33,7 +33,7 @@ class Contato
     private function validaTelefone(string $telefone): int
     {
         //3233-7523
-        return preg_match('/^[0-9]{4}-[0-9]{4}$/', $telefone, $encontrados);
+        return preg_match('/^[0-9]{2}[0-9]{5}-[0-9]{4}$/', $telefone, $encontrados);
     }
 
     private function setTelefone(string $telefone): void
